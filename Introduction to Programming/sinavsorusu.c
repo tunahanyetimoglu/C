@@ -14,8 +14,8 @@ double main(){
   
      if ( a == 1.0 || b == 0.0)
         return 1.0;
-		 else if( b < 0.0)
-					return (1.0/a)*(spow(a,b+1));
+     else if( b < 0.0)
+	return (1.0/a)*(spow(a,b+1));
      else
-          return a*(spow(a,b-1));
+       return a*(spow(a,b-1));
   }
