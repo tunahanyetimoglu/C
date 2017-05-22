@@ -1,19 +1,21 @@
 #include <stdio.h>
 
-int spow(int a, int b);
-int main(){
+double spow(double a, double b);
+double main(){
   
-  int a = 2;
-  int b = 3;
-  printf("%d",spow(a,b));
+  double a = 2;
+  double b = -3;
+  printf("%f",spow(a,b));
   
  return 0;
 }
 
-  int spow(int a, int b){
+  double spow(double a, double b){
   
-     if ( a == 1 || b == 0)
-        return 1;
+     if ( a == 1.0 || b == 0.0)
+        return 1.0;
+		 else if( b < 0.0)
+					return (1.0/a)*(spow(a,b+1));
      else
           return a*(spow(a,b-1));
   }
