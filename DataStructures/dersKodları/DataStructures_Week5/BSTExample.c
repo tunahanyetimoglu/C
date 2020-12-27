@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define NUMBEROFCUSTOMERS 15
+#define NUMBEROFSTUDENTS 15
 
 struct treeNode
 {
@@ -21,15 +21,15 @@ void inorderTravelsal_V2(TreeNodePointer treeNodePointer, int number);
 TreeNodePointer deleteNode(TreeNodePointer treeNodePointer, int number);
 void deleteTreeNode(TreeNodePointer *treeNodePointer, int number);
 
-int numbers[NUMBEROFCUSTOMERS] = {18060311, 20060045, 19061091, 20060134, 20060678, 18061086, 20060032, 20060067, 19060456, 18060245, 20060110, 20060234, 20060141, 20060011, 20060012};
-int notes[NUMBEROFCUSTOMERS] = {40, 50, 75, 90, 40, 75, 50, 60, 60, 75, 40, 90, 60, 50, 60};
+int numbers[NUMBEROFSTUDENTS] = {18060311, 20060045, 19061091, 20060134, 20060678, 18061086, 20060032, 20060067, 19060456, 18060245, 20060110, 20060234, 20060141, 20060011, 20060012};
+int notes[NUMBEROFSTUDENTS] = {40, 50, 75, 90, 40, 75, 50, 60, 60, 75, 40, 90, 60, 50, 60};
 
 int main(void)
 {
   //Invoking insertTreeNode method
   TreeNodePointer students = NULL;
 
-  for (int studentIndex = 0; studentIndex < NUMBEROFCUSTOMERS; studentIndex++)
+  for (int studentIndex = 0; studentIndex < NUMBEROFSTUDENTS; studentIndex++)
   {
     insertTreeNode_V2(&students, numbers[studentIndex], notes[studentIndex]);
   }
